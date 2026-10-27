@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Identidad visual de la Entrega 1 (css/estilos.css): bosque, terracota y oro sobre papel crema */
+:root {
+  --fondo: #f4efe4;
+  --superficie: #fffaf1;
+  --tinta: #1c1916;
+  --tinta-suave: #5b5348;
+  --bosque: #2c4a3e;
+  --bosque-oscuro: #1d332b;
+  --terracota: #c45c26;
+  --terracota-oscura: #9a4318;
+  --oro: #c4a35a;
+  --linea: #d9cbb3;
+  --error: #9b2c2c;
+  --exito: #276749;
+  --sombra: 0 12px 30px rgba(28, 25, 22, 0.08);
+}
+
+[data-tema="oscuro"] {
+  --fondo: #14110f;
+  --superficie: #1e1a17;
+  --tinta: #f4efe4;
+  --tinta-suave: #cbbda8;
+  --bosque: #7ea894;
+  --bosque-oscuro: #c4a35a;
+  --linea: #3a332c;
+  --error: #feb2b2;
+  --exito: #9ae6b4;
+  --sombra: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+@theme inline {
+  --color-fondo: var(--fondo);
+  --color-superficie: var(--superficie);
+  --color-tinta: var(--tinta);
+  --color-tinta-suave: var(--tinta-suave);
+  --color-bosque: var(--bosque);
+  --color-bosque-oscuro: var(--bosque-oscuro);
+  --color-terracota: var(--terracota);
+  --color-terracota-oscura: var(--terracota-oscura);
+  --color-oro: var(--oro);
+  --color-linea: var(--linea);
+  --color-error: var(--error);
+  --color-exito: var(--exito);
+  --shadow-suave: var(--sombra);
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-source), "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: var(--font-source), "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--terracota);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
