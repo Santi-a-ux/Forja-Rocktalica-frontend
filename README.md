@@ -83,13 +83,12 @@ El token se almacena en `localStorage` con la clave `forja-token`.
 
 ### Si usaste IA, ¿para qué y qué corregiste?
 
-Usé Claude (asistente de IA de Anthropic) para generar el código base del proyecto: la estructura por features, los componentes, los hooks, los servicios y los estilos con la paleta de la Entrega 1. Yo armé los repositorios, hice los commits, desplegué en Vercel y Render y probé todo en producción.
+Usé Claude para tener un poco la base, la estructura por features, los componentes y los estilos con la paleta de la Entrega 1.
 
 **Lo que tuve que corregir o resolver:**
-1. **Estructura de carpetas:** al copiar el proyecto del zip quedó dentro de una subcarpeta del repositorio. Lo moví a la raíz (junto a `package.json`, `app/` y `src/`) y borré la subcarpeta.
-2. **Imágenes:** las fotos del catálogo no se veían porque quedaron en `public/img/img-respaldo/` en lugar de `public/img/`. Las moví y lo subí en un commit `fix`.
-3. **Vercel:** el proyecto estaba configurado como sitio estático. Cambié el Framework Preset a Next.js, agregué `NEXT_PUBLIC_API_HOST` y redesplegué, porque la variable solo se aplica al reconstruir.
-4. **CORS:** el navegador bloqueó las peticiones a la API porque abrí el sitio por la URL de un despliegue concreto y no por el dominio principal. La API solo acepta el origen exacto que tiene en `CORS_ORIGIN`, así que usé `https://forja-rocktalica.vercel.app`.
+1. **Imágenes:** las fotos del catálogo no se veían porque quedaron en `public/img/img-respaldo/` en lugar de `public/img/`. Las moví y lo subí en un commit `fix`.
+2. **Vercel:** el proyecto estaba configurado como sitio estático. Cambié el Framework Preset a Next.js, agregué `NEXT_PUBLIC_API_HOST` y redesplegué, porque la variable solo se aplica al reconstruir.
+3. **CORS:** el navegador bloqueó las peticiones a la API porque abrí el sitio por la URL de un despliegue concreto y no por el dominio principal. La API solo acepta el origen exacto que tiene en `CORS_ORIGIN`, así que usé `https://forja-rocktalica.vercel.app`.
 
 ## Captura de la pestaña Network
 
